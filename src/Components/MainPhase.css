@@ -1,0 +1,173 @@
+.mainWrap {
+    background-color: #f4f5fe;
+    width: 50%;
+    padding-inline: 28px;
+    padding-block: 20px;
+} 
+.arrowWrap {
+    width: 9%;
+    display: flex;
+    justify-content: space-between;
+}
+.searchWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 30px ;
+}
+.trendingWrap {
+    margin-block: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customSearcBar {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding-inline: 20px;
+    padding-block: 13px;
+    width: 80%;
+}
+.customSearcBar input {
+    border-style: none;
+    color: #979799;
+}
+.musicTag {
+    display: flex;
+    align-items: center;
+}
+.musicTag p {
+    font-size: 13px;
+    color: #868687;
+}
+.moreText {
+    font-weight: 600;
+    font-size: 13px;
+    color: #868687;
+}
+.customSearcBar svg {
+    margin-inline-end: 13px;
+}
+.bannerImgWrap {
+    margin-block: 18px;
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(60deg, rgb(255,255,255) 23%,rgba(0,0,0, 0.1)), url("/public/assets/banner.jpeg");
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;    
+}
+
+.bannerLeft {
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    width: 100%;
+}
+
+.bannerLeft  h1 {
+    font-family: 'Rubik', sans-serif;
+    line-height: 37px;
+    margin: 15px 0px;
+}
+
+.bannerLeft div {
+    display: flex;
+}
+
+.bannerLeft div button:nth-child(1) {
+    padding: 8px 18px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 90px;
+    border-radius: 30px;
+    margin-right: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-size: 12px;
+}
+
+.bannerLeft div button:nth-child(2) {
+    padding: 8px 18px;
+    border: 1px solid rgb(78, 77, 77);
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: black;
+    width: 90px;
+    border-radius: 30px;
+    margin-right: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.bannerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+}
+
+.bannerRight p {
+    color: #bcbfc1;
+}
+ 
+.ulTag {
+    list-style: none;
+}
+.liTag {
+    display: flex;
+    justify-content: space-around;
+}
+.playerlistWrap {
+    background-color: #fff;
+    border-radius: 10px;
+    padding-block: 13px;
+    padding-inline: 20px;
+    margin-block: 15px;
+}
+.playingTimeWrap {
+    margin-block: 5px;
+}
+.playlistActionWrap, .playingTimeWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playIconsWrap svg {
+    margin-inline-end: 10px;
+
+}
+
+.backgroundBlue {
+    background-color: #f4f5fe;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+}
+
+.playerTimer {
+    width: 200px;
+    font-size: 20px;
+    color: red;
+    background-color: green;
+    /* font-size: 200px; */
+    /* font-weight: bold; */
+}

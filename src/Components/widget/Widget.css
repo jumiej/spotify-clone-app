@@ -1,0 +1,180 @@
+.sidebar {
+    width: 25%;
+    background-color: #fff;
+    padding-inline-start: 25px;
+}
+
+
+ .sidebar-icons {
+    display: flex;
+    margin-top: 30px;
+}
+
+.sidebar-circle {
+    border-radius: 20px;
+    margin-right: 160px;
+}
+
+.first-circle {
+    color: #d03122;
+    margin-right: 8px;
+}
+
+.second-circle {
+    color: #fdaf00;
+    margin-right: 8px;
+}
+
+.third-circle{
+    color: #269f26;
+    flood-color: #269f26;
+    margin-right: 8px;
+}
+
+.icon {
+    margin-block: 30px;
+}
+
+.active {
+    width: 250px;
+    height: 50px;
+    background-color: #15111e;
+    border-radius: 12px;  
+}
+
+.homeText {
+    color: #aeadb1;
+    margin-left: 10px;
+}
+
+.home-icon {
+    margin-left: 20px;
+}
+
+.homeIcon {
+    margin-left: 15px;
+    color: #ffffff;
+}
+
+
+.trend {
+    display: flex;
+    align-items: center;
+    margin-block: 25px;
+}
+
+.trends {
+    margin-left: 20px;
+    font-size: 11px;
+    font-weight: 8px;
+    color: #979799;
+}
+.GroupMenuText {
+    font-size: 11px;
+    font-weight: 8px;
+    color: #cfced5;
+}
+.imgText {
+    font-size: 11px;
+    font-weight: 700;
+    color: #616162;
+    margin-inline-start: 10px;
+}
+.imgWrap {
+    display: flex;
+    align-items: center;
+    margin-block: 30px;
+}
+.sidebarImg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.iconnn {
+    opacity: 0.6;
+}
+
+
+
+
+.asideTitle {
+    font-size: 20px;
+    margin-top: 22px;
+    color: #353537;
+}
+.rightAsideWrapper {
+  width: 25%;
+ background-color: #f4f5fe;
+ padding: 15px;
+}
+
+.first {
+    color: #ace2fa;
+}
+
+.second {
+    color: #f8d232;
+    font-weight: 600;
+
+}
+.instrumentProps {
+    display: flex;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-inline-end: 10px;
+    background-color: #ffffff;
+}
+
+ .instrumentProps h3 {
+    margin-left: 3px;
+} 
+
+.instrumentText {
+    color:#2f2f32 ;
+    font-size: 12px;
+}
+
+.bodyFlex {
+    display: flex;
+    margin-right: 10px;
+    margin-block: 10px;
+}
+
+.artist-container {
+    display: block;
+}
+
+.artistWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.artist-details {
+    display: flex;
+    margin-inline-start: 10px;
+    margin-block: 10px;
+    align-items: center;
+    color: red;
+}
+
+.numOf {
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    color: #c3c3cb;
+}
+
+.dot {
+    margin-left: 135px;
+    color: #c3c3cb;
+    font-weight: bolder;
+    font-size: 25px;
+    
+}
+
+.artists-name {
+    font-size: 15px;
+    color: #4a4753;
+}
