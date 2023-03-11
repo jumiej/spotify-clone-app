@@ -1,39 +1,12 @@
 // import axios from 'axios';
-// import { useEffect, useState } from 'react';
 import './App.css';
-import MainPhase from './Components/MainPhase';
-import Sidebar from './Components/widget/Sidebar';
-import RightAside from './Components/widget/RightAside';
-// import Login from './pages/login/Login';
-// import { Route, Routes } from 'react-router-dom';
-// import RightAside from "./Components/widget/RightAside";
-// import MainPhaseCss from './Components/MainPhase.css';
-// import widGetCss from "./Components/widget/widget.css";
+import Auth  from './Components/Auth'
 
 
 function App() {
-  const CLIENT_ID ="78bc8ea9b4254dc0ac6b0e3752d2ee6d"
-  const REDIRECT_URI = "http://localhost:3000/"
-  const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
-  const RESPONSE_TYPE = "token"
-
-
   return (
     <div className='app'>
-
-      <Sidebar />
-      <MainPhase />
-      <RightAside  />
-      {/* <Login /> */}
-
-      {/* <Routes>
-        <Route exact path='/Login'  element= {<Login />} />
-      </Routes> */}
-
-
-      {/* <a href={`${AUTH_ENDPOINT} ? client_id-${CLIENT_ID} &redirect_url-${REDIRECT_URI}&response_type-${RESPONSE_TYPE}`}>Login to spotify</a> */}
-      
-
+      <Auth />
     </div>
   );
 }
@@ -41,11 +14,7 @@ function App() {
 export default App;
 
 
-// {/* < RightAside/>  */}
 
-
-// {/* <MainPhaseCss/> */}
-// {/* < widGetCss />
 
 
 

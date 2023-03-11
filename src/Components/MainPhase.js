@@ -1,6 +1,5 @@
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
-// import { BsFire } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import { BsHeart } from "react-icons/bs";
 import { TbPlaylist } from "react-icons/tb";
@@ -14,8 +13,6 @@ import { IoVolumeLowOutline } from "react-icons/io5";
 import { RxSlider } from "react-icons/rx";
 import { IoVolumeMedium } from "react-icons/io5";
 import "./MainPhase.css";
-// import "react-step-progress-bar/styles.css";
-// import ProgressBar  from "react-step-progress-bar"
 
 const MainPhase = () => { 
 	return (
@@ -101,10 +98,6 @@ const MainPhase = () => {
 
 				<div className="playingTimeWrap">
 					<h6> 0.43 </h6>
-					{/* <ProgressBar
-					percent ={75}
-					fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
-					 /> */}
 					<RxSlider className="playerTimer" />
 					<h6> 2.59 </h6>
 				</div>

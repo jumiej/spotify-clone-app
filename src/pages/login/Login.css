@@ -23,9 +23,9 @@
     /* width: 60%; */
     margin: 48px auto;
 }  
-.loginButtonWrapper > button{
-    /* width: 100%; */
-}          
+/* .loginButtonWrapper > button{
+    width: 100%;
+}           */
 .prevbuttonWrapper {
     margin: 97px 0;
 }

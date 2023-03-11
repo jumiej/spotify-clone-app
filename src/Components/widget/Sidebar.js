@@ -8,9 +8,7 @@ import { BsCalendarRangeFill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 import { GiPlainCircle } from "react-icons/gi";
 import { RiPlayListLine } from "react-icons/ri";
-// import { Link, Router } from 'react-router-dom'
 import "./Widget.css";
-import Login from "../../pages/login/Login";
 
 const Sidebar = () => {
 	return (
@@ -76,14 +74,6 @@ const Sidebar = () => {
 			<div className="imgWrap">
 				<img className="sidebarImg" src="assets/imgone.JPG" alt="to be reduced " />
 				<p className="imgText">Ceptari Tyas</p>
-
-				{/* <div>rygeebfe</div> */}
-				{/* <Router>
-					<li>
-						<Link to={Login}Login In></Link>
-					</li>
-				</Router> */}
-				
 			</div>
 		</div>
 	);
