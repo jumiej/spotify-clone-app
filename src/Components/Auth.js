@@ -48,7 +48,7 @@ import LandingPage from "./LandingPage";
           >
             <div className="direction">
               <img src="spotLogo" alt="SpotifyLog"/>
-              Loginnnnn
+              Login
             </div>
            
           </a>

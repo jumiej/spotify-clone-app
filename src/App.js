@@ -3,7 +3,7 @@ import axios from "axios";
 import LandingPage from "./Components/LandingPage";
 
 const client_id = "78bc8ea9b4254dc0ac6b0e3752d2ee6d";
-const redirect_uri = "http://localhost:3000";
+const redirect_uri =  "https://spotify-clone-app-git-main-jumiej.vercel.app/";
 const response_type = "token";
 const auth_endpoint = "https://accounts.spotify.com/authorize?";
 const scope = "playlist-read-private";
@@ -44,7 +44,12 @@ function App() {
         href={`${auth_endpoint}client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=${response_type}&scope=${scope}&token_type=${token_type}&show_dialog=true
         `}
         >
-          Login
+          <div className="direction">
+              <img src="./assests/images/spotLogo.PNG"   alt="SpotifyLoginPage"/>
+              Login
+            </div>
+
+          {/* Loginnnnn */}
         </a>
       ) : (
         <LandingPage />
