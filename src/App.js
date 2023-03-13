@@ -40,14 +40,25 @@ function App() {
   return (
     <div className="App">
       {!tokenURI ? (
-        <a
+        <a style={{textDecoration:'none'}}
         href={`${auth_endpoint}client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=${response_type}&scope=${scope}&token_type=${token_type}&show_dialog=true
         `}
         >
-          <div className="direction">
-              <img src="./assests/images/spotLogo.PNG"   alt="SpotifyLoginPage"/>
-              Login
-            </div>
+          <div className="direction" style={{display: 'flex' , flexDirection:"column", alignItems:"center", justifyContent:"center", height: '100vh', backgroundColor:'black'}}>
+              <div className="directionFlex" style={{display: 'flex', alignContent:"center", justifyContent:'center'}}>
+                <img src="https://www.hypebot.com/wp-content/uploads/2019/11/spotify-1759471_1920.jpg"   alt="SpotifyLoginPage"  style={{width:'200px'
+                }}/>
+                {/* <p style={{margin}}>spotify</p> */}
+              </div>
+              <button style={{color: 'green', width:'180px', height:'50px', FontSize:'350px', marginTop:'10px', textAlign:'none', cursor:'pointer' }}>Login</button>
+
+              {/* <style>
+                p {
+                  color: white
+                  background-color:black
+                }
+              </style> */}
+          </div>
 
           {/* Loginnnnn */}
         </a>

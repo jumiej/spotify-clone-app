@@ -18,13 +18,13 @@
   }
   .arrowWrap {
     width: 55%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .searchWrap {
     width: 220px;
     border-radius: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .customSearcBar {
@@ -34,12 +34,12 @@
     margin-right: 14px;
     /* padding-block: 5px; */
     padding-inline: 10px;
-    border: solid peru;
+    /* border: solid peru; */
   }
  
   .customSearcBar input {
     font-size: 10px;
-    border: 1px red;
+    /* border: 1px red; */
   }
 
   .trendingWrap h2 {
@@ -48,24 +48,24 @@
 
   .bannerLeft  h1 {
     /* width: 5px; */
-    font-size: 20px;
+    font-size: 15px;
     line-height: 20px;
     margin: 10px 0px;
-    border: 1px solid red ;
+    /* border: 1px solid red ; */
   
   }
 
   .bannerRight {
     width: 20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   .bannerLeft div button:nth-child(1) {
     padding: 2px;
-    width: 50%;
+    width: 40%;
   }
 
   .bannerLeft div button:nth-child(2)  {
-    width: 50%;
+    width: 40%;
     padding: 10px;
   }
 }
