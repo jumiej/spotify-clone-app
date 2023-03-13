@@ -3,7 +3,7 @@ import axios from "axios";
 import LandingPage from "./Components/LandingPage";
 
 const client_id = "78bc8ea9b4254dc0ac6b0e3752d2ee6d";
-const redirect_uri =  "https://spotify-clone-app-git-main-jumiej.vercel.app/";
+const redirect_uri =  "https://spotify-clone-k53b4ndty-jumiej.vercel.app/"; 
 const response_type = "token";
 const auth_endpoint = "https://accounts.spotify.com/authorize?";
 const scope = "playlist-read-private";
