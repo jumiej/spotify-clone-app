@@ -18,6 +18,14 @@ import "./MainPhase.css";
 
 const MainPhase = () => { 
 	const [data, setData] = useState([])
+	const [search, setSearch] = useState([])
+	const [searchInput, setSearchInput] = useState([])
+	const [tracks, setTracks] = useState([])
+	const [currentTrack, setCurrentTrack] = useState([])
+	const [trackImage, setTrackImage] = useState([])
+	const [accessToken, setAccessToken] = useState([])
+	const [searchSongs, setSearchSongs] = useState([])
+
 	const url = 'me/playlists'
 
 	useEffect(() => {
@@ -26,7 +34,43 @@ const MainPhase = () => {
 		 setData(res?.data?.items)
 		 console.log(data, 'data')
 	   }).catch((err) => console.log(err))
-	 },[data])
+	 },[data]);
+
+
+	 async( () => {
+		// Get request using search to get Track ID
+		let trackParameter = {
+		  method: "GET",
+		  headers: {
+			"Content-Type": "application/json",
+			Authorization: `Bearer ${accessToken}`,
+		  },
+		};
+		let trackID = search.fetch(
+		  `https://api.spotify.com/v1/search?q=${searchInput}&type=track`,
+		  trackParameter
+		)
+		  .then((response) => response.json())
+		  .then((data) => setTracks(data.tracks.items.splice(0, 4)));
+		console.log(tracks[0].album.images[1].url);
+
+		const searchSongs = (e) => {
+			setSearchInput(e.target.va)
+		}
+
+		const realSearch = (e) => {
+			if (e.key == "Enter") {
+			  console.log("pressed enter");
+			  search();
+			}
+		  };
+	   
+
+		function handlePlay(preview,image) {
+			setCurrentTrack(preview)
+			setTrackImage(image)
+		  }
+	  })
 
 	return (
 		<div className="mainWrap">
