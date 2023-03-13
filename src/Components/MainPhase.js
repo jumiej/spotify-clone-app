@@ -12,9 +12,22 @@ import { TbArrowsShuffle } from "react-icons/tb";
 import { IoVolumeLowOutline } from "react-icons/io5";
 import { RxSlider } from "react-icons/rx";
 import { IoVolumeMedium } from "react-icons/io5";
+import { useState, useEffect } from 'react'
+import { axiosInstanc } from "../App";
 import "./MainPhase.css";
 
 const MainPhase = () => { 
+	const [data, setData] = useState([])
+	const url = 'me/playlists'
+
+	useEffect(() => {
+		axiosInstanc.get(url).then((res) =>{
+		 console.log(res, 'response')
+		 setData(res?.data?.items)
+		 console.log(data, 'data')
+	   }).catch((err) => console.log(err))
+	 },[data])
+
 	return (
 		<div className="mainWrap">
 			<div className="searchWrap">
@@ -63,13 +76,23 @@ const MainPhase = () => {
 
 			<div className="playlistsWrap">
 				<ul className="ulTag">
-					<li className="liTag">
-						<p>01</p>
-						<p>Priority</p>
-						<p>Mos Def</p>
-						<p>12:00</p>
-						<p>The Estatic</p>
-					</li>
+					{
+						data?.map((item, index) => {
+							return (
+                                <li key={index} className="liTag">
+                                    <p className="give">{item?.name ?? "No name"}</p>
+                                    <p className="give">{item?.owner?.display_name ?? "Nil"}</p>
+                                    <p className="give">{item?.tracks?.total ?? 'Nil'}</p>
+								</li>)
+						})
+							// <li className="liTag">
+							// 	<p>01</p>
+							// 	<p>Priority</p>
+							// 	<p>Mos Def</p>
+							// 	<p>12:00</p>
+							// 	<p>The Estatic</p>
+							// </li>
+				}
 				</ul>
 			</div>
 

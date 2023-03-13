@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&family=Poppins:ital,wght@0,100;1,100;1,200&family=Rubik:wght@400;500&display=swap'); */
+
 .mainWrap {
     background-color: #f4f5fe;
     width: 50%;
@@ -130,10 +132,29 @@
  
 .ulTag {
     list-style: none;
+    color: rgb(119, 110, 110);
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(232, 228, 228);
+    
 }
 .liTag {
     display: flex;
     justify-content: space-around;
+    color: black;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 5px;
+}
+
+.liTag li {
+    background-color: aquamarine;
+
+}
+
+.give:hover {
+    background-color: aquamarine;
 }
 .playerlistWrap {
     background-color: #fff;
@@ -166,8 +187,5 @@
 .playerTimer {
     width: 200px;
     font-size: 20px;
-    /* color: red; */
-    /* background-color: green; */
-    /* font-size: 200px; */
-    /* font-weight: bold; */
+   
 }
