@@ -1,13 +1,16 @@
 import "./App.css";
 import axios from "axios";
 import LandingPage from "./Components/LandingPage";
+import {useLocation} from 'react-router-dom'
+import { useEffect } from "react";
 
-const client_id = "78bc8ea9b4254dc0ac6b0e3752d2ee6d";
-const redirect_uri =  "https://spotify-clone-k53b4ndty-jumiej.vercel.app/"; 
+const client_id =process.env.REACT_APP_CLIENT_ID
+const redirect_uri =process.env.REACT_APP_REDIRECT_URI
 const response_type = "token";
-const auth_endpoint = "https://accounts.spotify.com/authorize?";
-const scope = "playlist-read-private";
+const auth_endpoint = process.env.REACT_APP_AUTH_ENDPOINT
+const scope = "playlist-read-private"
 const token_type = "Bearer";
+
 
 
 
@@ -21,6 +24,8 @@ export const axiosInstanc = axios.create({
   baseURL: "https://api.spotify.com/v1/",
 });
 
+
+
 axiosInstanc.interceptors.request.use((config) => {
   const newConfig = { ...config };
   
@@ -33,7 +38,6 @@ axiosInstanc.interceptors.request.use((config) => {
 
   return newConfig;
 });
-
 
 
 function App() {

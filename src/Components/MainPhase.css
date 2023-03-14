@@ -1,6 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&family=Poppins:ital,wght@0,100;1,100;1,200&family=Rubik:wght@400;500&display=swap'); */
 
 .mainWrap {
+    display: flex;
+    flex-direction: column;
     background-color: #f4f5fe;
     width: 50%;
     padding-inline: 28px;
@@ -170,6 +172,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* display: block; */
+    /* flex-direction: column; */
 }
 .playIconsWrap svg {
     margin-inline-end: 10px;
@@ -190,3 +194,13 @@
    
 }
 
+.singleSongs{
+    /* border: 1px solid red; */
+}
+
+.son tr {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* color: red; */
+}

@@ -12,25 +12,34 @@ import { TbArrowsShuffle } from "react-icons/tb";
 import { IoVolumeLowOutline } from "react-icons/io5";
 import { RxSlider } from "react-icons/rx";
 import { IoVolumeMedium } from "react-icons/io5";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import { axiosInstanc } from "../App";
 import "./MainPhase.css";
 
-const MainPhase = () => { 
-	const [data, setData] = useState([])
-	
 
-	const url = 'me/playlists'
+const data = [
+	{ no:"#", 	HEADING: "TITTLE", name: "ARTIST", time:"TIME", songs:"ALBUM" },
+	// { name: "Megha", age: 19, gender: "Female" }, Q1S`	
+	// { name: "Subham", age: 25, gender: "Male"},
+  ]
+
+const MainPhase = () => {
+	const [data, setData] = useState([]);
+
+	// const url = 'me/playlists'
+	// const url = 'browse/new-releases'
+	const url = "playlists/37i9dQZF1EIUQpJ2F6wHN3/tracks";
 
 	useEffect(() => {
-		axiosInstanc.get(url).then((res) =>{
-		 console.log(res, 'response')
-		 setData(res?.data?.items)
-		 console.log(data, 'data')
-	   }).catch((err) => console.log(err))
-	 },[data]);
-
-
+		axiosInstanc
+			.get(url)
+			.then((res) => {
+				console.log(res, "response");
+				setData(res?.data?.items);
+				console.log(data, "data");
+			})
+			.catch((err) => console.log(err));
+	}, []);
 
 	return (
 		<div className="mainWrap">
@@ -59,18 +68,20 @@ const MainPhase = () => {
 			</div>
 
 			<div className="bannerImgWrap">
-                <div className="bannerLeft">
-                    <p>Artist</p>
-                    <h1>On Top <br/> Of The World </h1>
-                    <div>
-                        <button>Play</button>
-                        <button>Follow</button>
-                    </div>
-                </div>
-                <div className="bannerRight">
-                    <p>Montly Listener</p>
-                    <p>32.092</p>
-                </div>
+				<div className="bannerLeft">
+					<p>Artist</p>
+					<h1>
+						On Top <br /> Of The World{" "}
+					</h1>
+					<div>
+						<button>Play</button>
+						<button>Follow</button>
+					</div>
+				</div>
+				<div className="bannerRight">
+					<p>Montly Listener</p>
+					<p>32.092</p>
+				</div>
 			</div>
 
 			<div className="trendingWrap">
@@ -83,22 +94,45 @@ const MainPhase = () => {
 					{
 						data?.map((item, index) => {
 							return (
-                                <li key={index} className="liTag">
-                                    <p className="give">{item?.name ?? "No name"}</p>
-                                    <p className="give">{item?.owner?.display_name ?? "Nil"}</p>
-                                    <p className="give">{item?.tracks?.total ?? 'Nil'}</p>
-								</li>)
+								<li key={index} className="liTag">
+									<p className="give">{item?.name ?? "No name"}</p>
+									<p className="give">{item?.owner?.display_name ?? "Nil"}</p>
+									<p className="give">{item?.tracks?.total ?? "Nil"}</p>
+								</li>
+							);
 						})
-							// <li className="liTag">
-							// 	<p>01</p>
-							// 	<p>Priority</p>
-							// 	<p>Mos Def</p>
-							// 	<p>12:00</p>
-							// 	<p>The Estatic</p>
-							// </li>
-				}
+						// <li className="liTag">
+						// 	<p>01</p>
+						// 	<p>Priority</p>
+						// 	<p>Mos Def</p>
+						// 	<p>12:00</p>
+						// 	<p>The Estatic</p>
+						// </li>
+					}
 				</ul>
 			</div>
+			<div className="singleSongs">
+					<table className="son" >
+						<tr className="songs" >
+							<th>#</th>
+							<th>tittle</th>
+							<th>artist</th>
+							<th>time</th>
+							<th>album</th>
+
+						</tr>
+						
+						{data.map((val, key) => {
+							return (
+								<tr key={key}>
+									<td>{val.name}</td>
+									<td>{val.age}</td>
+									<td>{val.gender}</td>
+								</tr>
+							);
+						})}
+					</table>
+				</div>
 
 			<div className="playerlistWrap">
 				<div className="playlistActionWrap">
